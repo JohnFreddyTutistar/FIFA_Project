@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row center-xs">
+    <div class="col-xs-12 col-md-10">
+      <section class="center-xs" style="background-color: #fff;">
+        <img src="assets/images/fifa-logo2.png" style="max-height: 100px; max-width: 90%; margin: 30px auto;">
+        <h2>Iniciar Sesión</h2>
+        <form [formGroup]="FormGroupSend" autocomplete="off" (ngSubmit)="sendForm()">
+          <mat-form-field class="width-inputs" appearance="outline">
+            <mat-label>Usuario</mat-label>
+            <input ngDefaultControl formControlName="User" matInput type="text" style="width: 100%;">
+            <mat-icon mat-icon-button matSuffix>account_circle</mat-icon>
+            <mat-error *ngIf="FormGroupSend.controls['User'].touched && FormGroupSend.controls['User'].hasError('required')">
+              Este campo es requerido
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="width-inputs" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input ngDefaultControl formControlName="Pass" matInput type="password" [type]="hide ? 'password' : 'text'" style="width: 100%;">
+            <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </a>
+            <mat-error *ngIf="FormGroupSend.controls['Pass'].touched && FormGroupSend.controls['Pass'].hasError('required')">
+              Este campo es requerido
+            </mat-error>
+          </mat-form-field><br>
+
+          <button
+            mat-raised-button
+            type="submit"
+            style="padding: 7px 20px; margin: 10px; background-color: #045694; color: #fff;">
+            <mat-icon>input</mat-icon>
+             Entrar
+          </button><br>
+          <div class="row spacer"></div>
+          <a href="">Olvide mi contraseña</a>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>

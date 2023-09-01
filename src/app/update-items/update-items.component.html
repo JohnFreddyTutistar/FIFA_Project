@@ -1,0 +1,109 @@
+<div class="container" style="padding-top: 30px;">
+  <div class="row center-xs">
+    <div class="col-xs-8 col-md-6">
+      <h1 style="color: #045694;"><b>Actualización</b> de datos del equipo de futbol</h1>
+      <hr class="line-separator">
+    </div>
+  </div>
+
+  <div class="row spacer"></div>
+
+  <div class="row center-xs">
+    <div class="col-xs-12 col-md-8">
+      <form [formGroup]="FormGroupSend" autocomplete="off" (ngSubmit)="sendForm()">
+        <div class="row center-xs">
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input formControlName="Name" matInput type="text" placeholder="nombre el equipo de futbol">
+              <mat-error *ngIf="FormGroupSend.controls['Name'].touched && FormGroupSend.controls['Name'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Estadio</mat-label>
+              <input formControlName="Estadio" matInput type="text" placeholder="estadio">
+              <mat-error *ngIf="FormGroupSend.controls['Estadio'].touched && FormGroupSend.controls['Estadio'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row center-xs">
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Sitio web</mat-label>
+              <input formControlName="WebSite" matInput type="text" placeholder="ej. www.equipo.com">
+              <mat-error *ngIf="FormGroupSend.controls['WebSite'].touched && FormGroupSend.controls['WebSite'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Nacionalidad</mat-label>
+              <input formControlName="Nacionality" matInput type="text" placeholder="nacionalidad">
+              <mat-error *ngIf="FormGroupSend.controls['Nacionality'].touched && FormGroupSend.controls['Nacionality'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row center-xs">
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>fecha de fundación</mat-label>
+              <input formControlName="Date" matInput type="date">
+            </mat-form-field>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Entrenador</mat-label>
+              <input formControlName="Coach" matInput type="text" placeholder="entrenador">
+              <mat-error *ngIf="FormGroupSend.controls['Coach'].touched && FormGroupSend.controls['Coach'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row center-xs">
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Capacidad</mat-label>
+              <input formControlName="Capacity" matInput type="number" placeholder="capacidad">
+              <mat-error *ngIf="FormGroupSend.controls['Capacity'].touched && FormGroupSend.controls['Capacity'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <mat-form-field class="width-inputs" appearance="outline">
+              <mat-label>Valor</mat-label>
+              <input formControlName="Value" matInput type="number" placeholder="valor">
+              <mat-error *ngIf="FormGroupSend.controls['Value'].touched && FormGroupSend.controls['Value'].hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row spacer"></div>
+
+        <div class="row center-xs">
+          <div class="col-xs-12 col-md-6">
+            <button mat-raised-button style="background: #045694; color: #fff;">
+              <mat-icon style="color: #fff;">update</mat-icon>
+              GUARDAR CAMBIOS
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

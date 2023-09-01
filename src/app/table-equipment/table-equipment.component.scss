@@ -1,0 +1,38 @@
+// table {
+//   width: 100%;
+// }
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  /* Estilos específicos para pantallas más pequeñas */
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+.row {
+  &.spacer {
+    padding: 5px;
+  }
+}
+
+.width-inputs {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: stretch;
+  margin: 15px;
+}
+
+.line-separator {
+  width: 10%;
+  margin: 20px auto;
+  height: 3px;
+  border: none;
+  background-color: #045694;
+}
